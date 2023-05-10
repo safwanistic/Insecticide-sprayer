@@ -20,28 +20,37 @@ class SimpleReflexsprayAgent(Environment):
                 Environment.locationCondition['A'] = 0
                 Score += 1
                 print ("Location A has been DISINFECTED.") 
+                time.sleep(0.9)
             print ("Moving to Location B...")
+            time.sleep(0.9)
             print ("Location B is INFECTED.") if Environment.locationCondition['B'] == 1 else print("Location B is DISINFECTED.")
             if Environment.locationCondition['B'] == 1:
                 Environment.locationCondition['B'] = 0;
                 Score += 1
                 print ("Location B has been DISINFECTED.")
+                time.sleep(0.9)
             print("Environment is DISINFECTED.")
+            time.sleep(0.9)
                 
         elif sprayLocation == 1:
             print ("spray randomly placed at Location B.")
+            time.sleep(0.9)
             print ("Location B is INFECTED.") if Environment.locationCondition['B'] == 1 else print("Location B is DISINFECTED.")
             if Environment.locationCondition['B'] == 1:
                 Environment.locationCondition['B'] = 0
                 Score += 1
                 print ("Location B has been DISINFECTED.")
+                time.sleep(0.9)
             print ("Moving to Location A...")
+            time.sleep(0.9)
             print ("Location A is INFECTED.") if Environment.locationCondition['A'] == 1 else print("Location A is DISINFECTED.")
             if Environment.locationCondition['A'] == 1:
                 Environment.locationCondition['A'] = 0;
                 Score += 1
                 print ("Location A has been DISINFECTED.")
+                time.sleep(0.9)
             print("Environment is DISINFECTED.")    
+            time.sleep(0.9)
             
         print (Environment.locationCondition)
         print ("Performance Measurement: " + str(Score))
