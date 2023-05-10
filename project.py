@@ -7,8 +7,8 @@ class Environment(Object):
 # 0 indicates clean area
         self.locationcondition= {'A': '0','B': '1'} #'C': '1', 'D' : 1
 
-self.locationcondition['A']=random.choice(0,1)
-self.locationcondition['B']=random.choice(0,1)
+self.locationcondition['A']=random.randint(0,1)
+self.locationcondition['B']=random.randint(0,1)
 # self.locationcondition['C']=random.choice(0,1)
 # self.locationcondition['D']=random.choice(0,1)
 
@@ -53,9 +53,33 @@ class simplexAgent(Environment):
                 Environment.locationcondition['B']==0;
                 print("Area 'B' has been DISINFECTED")
 
-                print("***********")
+                print("***********");
+        
 
-        elif sprayLocation==1:
+            elif sprayLocation==1:
+                print("Sprayer is moved to Area B")
+                # If area 'B' is infected
+                if Environment.locationcondition['B']==1:
+                    print("Area 'B' is INFECTED")
+                # Spray() and make it clean
+                    Environment.locationcondition['B']==0;
+                    print("Area 'A' has been DISINFECTED")
+                # If area 'A' is infected
+                    if Environment.locationcondition['A']==1:
+                        print("Area 'A' is INFECTED")
+                    # Spray() and make it clean
+                        Environment.locationcondition['A']==0;
+                        print("Area 'A' has been DISINFECTED")
+            else:
+            # Moving sprayer to Area 'A'
+                print("Moving to area 'A'")
+            if Environment.locationcondition['A']==1:
+                print("Area 'A' is INFECTED")
+            # Spray() and make it clean
+                Environment.locationcondition['A']==0;
+                print("Area 'A' has been DISINFECTED")
+
+                print("***********");
 
 
 print(Environment.locationcondition)
