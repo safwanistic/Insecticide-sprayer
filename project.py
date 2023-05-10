@@ -1,14 +1,12 @@
 import random
-
-class Environment(object):
-    def __init__(self):
 # There are 4 areas, A,B,C,D
 # 1 indicates infected 
 # 0 indicates clean area
-        self.locationcondition= { 'A' : '0', 'B' : '1'} #'C': '1', 'D' : 1
-
-self.locationcondition['A']=random.randint(0,1)
-self.locationcondition['B']=random.randint(0,1)
+class Environment(object):
+    def __init__(self):
+        self.locationcondition = { 'A' : '0', 'B' : '1'} #'C': '1', 'D' : 1
+        self.locationcondition['A']=random.randint(0,1)
+        self.locationcondition['B']=random.randint(0,1)
 # self.locationcondition['C']=random.choice(0,1)
 # self.locationcondition['D']=random.choice(0,1)
 
