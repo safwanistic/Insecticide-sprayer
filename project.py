@@ -27,20 +27,21 @@ class simplexAgent(Environment):
                 Environment.locationcondition['A']==0;
                 print("Area 'A' has been DISINFECTED")
             # If area 'B' is infected
-            if Environment.locationcondition['B']==1:
-                print("Area 'B' is INFECTED")
-            # Spray() and make it clean
-                Environment.locationcondition['B']==0;
-                print("Area 'B' has been DISINFECTED")
-            # If area 'C' is infected
-            if Environment.locationcondition['C']==1:
-                print("Area 'C' is INFECTED")
-            # Spray() and make it clean
-                Environment.locationcondition['C']==0;
-                print("Area 'C' has been DISINFECTED")
-            # If area 'D' is infected
-            if Environment.locationcondition['D']==1:
-                print("Area 'D' is INFECTED")
-            # Spray() and make it clean
-                Environment.locationcondition['D']==0
-                print("Area 'D' has been DISINFECTED")
+                if Environment.locationcondition['B']==1:
+                    print("Area 'B' is INFECTED")
+                # Spray() and make it clean
+                    Environment.locationcondition['B']==0;
+                    print("Area 'B' has been DISINFECTED")
+                # If area 'C' is infected
+                    if Environment.locationcondition['C']==1:
+                        print("Area 'C' is INFECTED")
+                    # Spray() and make it clean
+                        Environment.locationcondition['C']==0;
+                        print("Area 'C' has been DISINFECTED")
+                    # If area 'D' is infected
+                        if Environment.locationcondition['D']==1:
+                            print("Area 'D' is INFECTED")
+                        # Spray() and make it clean
+                            Environment.locationcondition['D']==0
+                            print("Area 'D' has been DISINFECTED")
+                    
