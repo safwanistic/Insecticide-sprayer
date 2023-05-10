@@ -15,4 +15,7 @@ self.locationcondition['D']=random.choice(0,1)
 class simplexAgent(Environment):
     def __init__(self, Environment):
         print(Environment.locationcondition)
+        # Placing the sprayer at random location
+        sprayLocation = random.randint(0,1)
+        # if sprayer is in Room 'A'
         
