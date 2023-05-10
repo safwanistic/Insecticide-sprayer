@@ -38,3 +38,9 @@ class simplexAgent(Environment):
             # Spray() and make it clean
                 Environment.locationcondition['C']==0;
                 print("Area 'C' has been DISINFECTED")
+            # If area 'D' is infected
+            if Environment.locationcondition['D']==1:
+                print("Area 'D' is INFECTED")
+            # Spray() and make it clean
+                Environment.locationcondition['D']==0
+                print("Area 'D' has been DISINFECTED")
