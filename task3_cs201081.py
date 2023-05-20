@@ -25,14 +25,11 @@ def main():
     time.sleep(.85)
 
     start_room = random.randint(0, 19)
-
     time.sleep(.85)
-    
     print("Starting room: ", start_room)
 
     visitedRooms = [False] * 20
     visitedRooms[start_room] = True
-
     dfs_vacuum_cleaner(start_room, visitedRooms)
 
 if __name__ == '__main__':
