@@ -2,17 +2,17 @@ import random
 import time
 
 
-def dfs_vacuum_cleaner(room, visited):
+def dfs_vacuum_cleaner(room, visitedRooms):
     print("Cleaning room #", room)
 
-    visited[room] = True
+    visitedRooms[room] = True
 
     # Generate random neighboring rooms
     neighbors = random.sample(range(20), 4)
 
     for neighbor in neighbors:
-        if not visited[neighbor]:
-            dfs_vacuum_cleaner(neighbor, visited)
+        if not visitedRooms[neighbor]:
+            dfs_vacuum_cleaner(neighbor, visitedRooms)
             time.sleep(.95)
             break
     else:
@@ -29,12 +29,12 @@ def main():
     time.sleep(.85)
     print("Starting room:", start_room)
 
-    # Mark the starting room as visited
-    visited = [False] * 20
-    visited[start_room] = True
+    # Mark the starting room as visitedRooms
+    visitedRooms = [False] * 20
+    visitedRooms[start_room] = True
 
     # Clean the rooms using DFS
-    dfs_vacuum_cleaner(start_room, visited)
+    dfs_vacuum_cleaner(start_room, visitedRooms)
 
 if __name__ == '__main__':
     main()
