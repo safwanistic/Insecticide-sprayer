@@ -3,6 +3,7 @@ import time
 
 
 def dfs_vacuum_cleaner(room, visitedRooms):
+    time.sleep(0.7)
     print("Cleaning room #", room)
 
     visitedRooms[room] = True
@@ -27,7 +28,7 @@ def main():
     # Choose a random starting room
     start_room = random.randint(0, 19)
     time.sleep(.85)
-    print("Starting room:", start_room)
+    print("Starting room: ", start_room)
 
     # Mark the starting room as visitedRooms
     visitedRooms = [False] * 20
